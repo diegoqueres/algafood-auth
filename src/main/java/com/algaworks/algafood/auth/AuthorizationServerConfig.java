@@ -41,7 +41,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
             .and()
                 .withClient("foodanalytics")
-                .secret(passwordEncoder.encode(""))
+                .secret(passwordEncoder.encode(""))   //fica a seu critério deixar sem secret se usar o PKCE (ou não)
                 .authorizedGrantTypes("authorization_code")
                 .scopes("write", "read")
                 .redirectUris("http://aplicacao-cliente")
